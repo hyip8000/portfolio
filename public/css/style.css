@@ -13,6 +13,7 @@ header {
   background-position: center center;
   background-attachment: fixed;
   background-size: cover;
+  cursor: context-menu;
 }
 
 .mainheader {
@@ -24,14 +25,15 @@ header {
   text-align: center;
   outline: none;
   text-decoration: none;
-  transition: background-color 0.2s ease-out, color 0.2s ease-out;
+  background-color: #fff; /* fallback */
+  background-color: rgba(255, 255, 255, 0.4);
 }
 
 .mainheader:hover {
   background-color: #fff; /* fallback */
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(255, 255, 255, 0.6);
   border-color: #fff; /* fallback */
-  border-color: rgba(255, 255, 255, 0.4);
+  border-color: rgba(255, 255, 255, 0.6);
   transition: background-color 0.3s ease-in, color 0.3s ease-in;
   cursor: context-menu;
 }
@@ -103,7 +105,8 @@ h1 {
 
 .intro {
   background-color: white;
-  padding: 80px 0;
+  padding: 60px 0;
+  cursor: context-menu;
 }
 
 .intro h3 {
@@ -120,12 +123,13 @@ h1 {
   margin: 10px;
 }
 
-.background-content p {
-  margin: 15px 140px 25px;
-  padding: 25px;
+.background-content {
+  padding: 20px 0;
   font-family: Quicksand;
-  background-color: #ffe6ee;
+  background-color: #ffedef;
   border-radius: 10px;
+  width: 85%;
+  margin: auto;
 }
 
 .header-background {
@@ -134,6 +138,7 @@ h1 {
   margin: auto;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
 .header-background h2 {
@@ -144,7 +149,6 @@ h1 {
 
 .fa-background {
   border-radius: 100%;
-  color: #000;
   cursor: default;
   display: inline-block;
   height: 2.5em;
@@ -164,21 +168,22 @@ h1 {
   font-size: 20px;
   font-weight: bold;
   border-color: lightgrey;
-  margin-top: 10px;
+  margin-top: 40px;
 }
 
 .resume:hover {
-  border-color: palevioletred;
-  background-color: palevioletred;
+  border-color: #AB666F;
+  background-color: #AB666F;
   color: white;
   text-transform: uppercase;
   transition: background-color border-color 0.3s ease-in, color 0.3s ease-in;
 }
 
 .section.proj {
-  padding: 50px;
+  padding: 50px 0 !important;
   background-color: #D04545;
   font-family: Quicksand;
+  cursor: context-menu;
 }
 
 .skill-1 {
@@ -204,6 +209,7 @@ h1 {
   height: 25px;
   text-align: end;
   margin: 0 0 10px 0;
+  color: white
 }
 
 .bar {
@@ -239,6 +245,82 @@ h1 {
   color: white;
 }
 
+.expertise {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.expertise:hover {
+  cursor: context-menu;
+}
+
+.exp-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.expertise p {
+  border: 1px solid;
+  border-radius: 2px;
+  margin: 5px;
+  padding: 5px 15px;
+  background-color: #414a4c;
+  border-color: #FADFE1;
+  color: white;
+}
+
+.prev-proj {
+  padding: 40px 0;
+}
+
+.prev-proj img {
+  width: 100%;
+  height: 100%;
+}
+
+.prev-proj-box {
+  position: relative;
+}
+
+.filter-overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left:0;
+  top:0;
+  background-color: rgba(255, 255, 255, 0);
+  transition: 200ms;
+  opacity: 0;
+
+  display:flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: Cabin;
+  font-weight: bold;
+}
+
+.filter-overlay:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  opacity: 1;
+
+  display:flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  font-family: Cabin;
+  font-size: 30px;
+  letter-spacing: 2px;
+}
+
+.nopadding {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
 .contact {
   background-color: #ffe9ec;
   padding: 30px 0;
@@ -271,7 +353,7 @@ h1 {
   margin: 5px;
 }
 
-.fa:hover {
+.icons:hover {
   opacity: 0.8;
   color: white;
   text-decoration: none;
