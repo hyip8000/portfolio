@@ -103,7 +103,7 @@ h1 {
 
 .intro {
   background-color: white;
-  padding: 80px 0 130px 0;
+  padding: 80px 0;
 }
 
 .intro h3 {
@@ -160,10 +160,11 @@ h1 {
 .resume {
   font-family: Roboto;
   color: #dd5d9d;
-  padding: 10px 20px;
+  padding: 8px 20px;
   font-size: 20px;
   font-weight: bold;
   border-color: lightgrey;
+  margin-top: 10px;
 }
 
 .resume:hover {
