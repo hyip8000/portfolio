@@ -16,6 +16,16 @@ header {
   cursor: context-menu;
 }
 
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    header {
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+}
+
 .mainheader {
   width: 50%;
   margin: auto;
@@ -32,8 +42,6 @@ header {
 .mainheader:hover {
   background-color: #fff; /* fallback */
   background-color: rgba(255, 255, 255, 0.6);
-  border-color: #fff; /* fallback */
-  border-color: rgba(255, 255, 255, 0.6);
   transition: background-color 0.3s ease-in, color 0.3s ease-in;
   cursor: context-menu;
 }
@@ -41,6 +49,15 @@ header {
 .mainheader:hover span {
   font-weight: bold;
   color: black;
+}
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .mainheader{
+      width: 80%;
+    }
 }
 
 h1 {
@@ -113,10 +130,35 @@ h1 {
 .bgrnd-row:after {
   content: ""; /* This is necessary for the pseudo element to work. */
   display: block; /* This will put the pseudo element on its own line. */
-  margin: 0 auto; /* This will center the border. */
+  margin: -12px auto; /* This will center the border. */
   width: 80%; /* Change this to whatever width you want. */
   padding-top: 20px; /* This creates some space between the element and the border. */
   border-bottom: 1px solid #808080; /* This creates the border. Replace black with whatever color you want. */
+}
+
+.designer-cube, .leader-cube {
+  border-left: 1px solid #808080;
+}
+
+@media only screen
+  and (max-width: 540px)
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .Designer:before, .Leader:before {
+      content: "";
+      display: block;
+      margin: 0 auto;
+      width: 90%;
+      padding-top: 20px;
+      border-bottom: 1px solid #808080;
+    }
+    .designer-cube, .leader-cube {
+      border: 0;
+    }
+    .Leader h2 {
+      margin: 0 -18px;
+    }
 }
 
 .intro h3 {
@@ -208,6 +250,13 @@ h1 {
 #skills {
   display: flex;
   justify-content: center;
+  width: 100%;
+}
+
+@media only screen and (max-width: 1070px) {
+    #skills {
+        flex-direction: column;
+    }
 }
 
 .words{
@@ -223,6 +272,7 @@ h1 {
 
 .bar {
   flex-direction: column;
+  width: 70%;
 }
 
 /* whole bar */
@@ -230,6 +280,12 @@ h1 {
   height: 25px;
   width: 400px;
   margin: 10px;
+}
+
+@media only screen and (max-width: 540px) {
+    .progress {
+        width: 100%;
+    }
 }
 
 /* bar contents */
@@ -267,6 +323,20 @@ h1 {
   justify-content: center;
 }
 
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .exp-content {
+        flex-direction: column;
+        width: 60%;
+        margin: auto;
+    }
+    .progress {
+      width: 80%;
+    }
+}
+
 .expertise p {
   border: 1px solid;
   border-radius: 2px;
@@ -288,6 +358,15 @@ h1 {
 
 .prev-proj-box {
   position: relative;
+}
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .filter-overlay  {
+      height: 100%;
+    }
 }
 
 .filter-overlay {
@@ -360,6 +439,65 @@ h1 {
   margin: 0 30px;
 }
 
+.logo-leadership {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (max-width: 660px) {
+  .first-logo-row, .sec-logo-row {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .asub.leader {
+    margin-bottom: 20px;
+  }
+
+  .cswn.leader {
+    margin-bottom: 30px;
+  }
+
+  .purdue.leader {
+    margin-top: -10px;
+  }
+}
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .logo-leadership {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .first-logo-row, .sec-logo-row {
+      display: flex;
+      flex-direction: row;
+      margin: 10px 0;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .logo-leadership input {
+      margin: 0 10px;
+    }
+
+    .sase.leader {
+      margin-bottom: 30px;
+    }
+
+    .purdue.leader {
+      margin-top: -20px;
+    }
+}
+
 .asub.leader {
   border-radius: 150%;
   width: 85px;
@@ -377,29 +515,42 @@ h1 {
 }
 
 .purdue.leader {
-  width: 105px;
+  width: 115px;
   height: 80px;
 }
 
 .content-leadership {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   margin-top: 20px;
-  background-color: #414a4c;
+  background-color: #ffe9ec;
+  border-radius: 5px;
+  z-index: 2;
+}
+
+@media only screen
+  and (min-device-width: 375px)
+  and (max-device-width: 667px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .content-leadership, #asub-content, #sase-content, #cswn-content, #purdue-content  {
+      width: 100%;
+    }
 }
 
 .content-leadership h5 {
   font-family: Cabin;
   font-weight: bold;
-  color: #F5F5F5;
+  color: #202020;
   font-size: 20px;
+}
+
+.content-leadership p {
+  margin: 2px 0;
 }
 
 .prev-awards {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 10px;
 }
 
 .prev-awards h6 {
@@ -409,10 +560,13 @@ h1 {
   color: #F5F5F5;
   margin-top: 10px;
   letter-spacing: 2px;
+  text-align: center;
 }
 
 .prev-awards p {
   font-size: 15px;
+  font-weight: bold;
+  color: #202020;
 }
 
 .contact {
@@ -470,6 +624,11 @@ h1 {
 
 .fa-instagram {
   background: #125688;
+  color: white;
+}
+
+.fa-link {
+  background: black;
   color: white;
 }
 
