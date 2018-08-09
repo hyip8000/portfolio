@@ -59,7 +59,7 @@ header {
   and (max-device-width: 750px)
   and (-webkit-min-device-pixel-ratio: 2) {
     .mainheader {
-      width: 80%;
+      width: 100%;
       background-color: #fff; /* fallback */
       background-color: rgba(255, 255, 255, 0.6);
       font-weight: bold;
@@ -69,6 +69,8 @@ header {
     .mainheader span {
       font-weight: bold;
       color: black;
+      font-size: 17px;
+      letter-spacing: 1px;
     }
 
     .landing {
