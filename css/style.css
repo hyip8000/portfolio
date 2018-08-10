@@ -30,7 +30,7 @@ header {
 
 .mainheader {
   width: 50%;
-  margin: auto;
+  margin: 0 auto 110px;
   padding: 8px 0 2px 0;
   color: #fff;
   border: 1px solid #fff;
@@ -51,6 +51,13 @@ header {
 .mainheader:hover span {
   font-weight: bold;
   color: black;
+}
+
+.landing {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 600px;
 }
 
 @media only screen
@@ -96,7 +103,7 @@ h1 {
 .mainheader h2 {
   font-size: 20px;
   font-family: Quicksand;
-  letter-spacing: 4px;
+  letter-spacing: 2px;
   color: white;
   align-items: center;
 }
