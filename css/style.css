@@ -152,7 +152,7 @@ a.nav-link:hover {
 
 .intro {
   background-color: white;
-  padding: 60px 0 30px 0;
+  padding: 60px 0 0 0;
   cursor: context-menu;
 }
 
@@ -256,8 +256,7 @@ a.nav-link:hover {
 }
 
 .section.proj {
-  /* padding: 20px 0 !important; */
-  /* background-color: #D04545; */
+  padding: 80px 0 0 0;
   font-family: Quicksand;
   cursor: context-menu;
 }
