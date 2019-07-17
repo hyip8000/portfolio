@@ -101,7 +101,7 @@ h1 {
 
 #navbarSupportedContent, a.nav-link {
   font-family: Quicksand;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
 }
 
@@ -486,6 +486,10 @@ a.nav-link:hover {
 
 .logo-leadership input {
   margin: 10px 20px;
+}
+
+.logo-leadership input:focus {
+  outline: none;
 }
 
 .logo-leadership {
